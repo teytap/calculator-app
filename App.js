@@ -92,4 +92,7 @@ deleteEl.addEventListener("click", function () {
   screen.innerHTML = text;
   num = Number(text);
 });
-equalEl.addEventListener("click", function () {});
+equalEl.addEventListener("click", function () {
+  "use strict";
+  screen.innerHTML = eval(screen.innerHTML);
+});
