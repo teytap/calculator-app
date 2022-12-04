@@ -1,0 +1,93 @@
+:root {
+  /*background*/
+  --very-dark-blue-main: hsl(222, 26%, 31%);
+  --very-dark-blue-screen: hsl(224, 36%, 15%);
+  --very-dark-blue-keypad: hsl(223, 31%, 20%);
+
+  /*Keys*/
+  --dark-blue-key-bg: hsl(225, 21%, 49%);
+  --dark-blue-key-shadow: hsl(224, 28%, 35%);
+  --red: hsl(6, 63%, 50%);
+  --dark-red: hsl(6, 70%, 34%);
+  --light-grey-key: hsl(30, 25%, 89%);
+  --grey-orange: hsl(28, 16%, 65%);
+
+  /*Text*/
+  --dark-grey-blue: hsl(221, 14%, 31%);
+}
+body {
+  background: var(--very-dark-blue-main);
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+h1,
+h4 {
+  font-weight: 700;
+  color: white;
+}
+main {
+  max-width: 500px;
+  max-height: 700px;
+  display: block;
+  margin: 60px auto;
+}
+.row {
+  display: flex;
+
+  justify-content: space-between;
+}
+#screen {
+  padding: 20px 30px;
+  width: 90%;
+  height: 48px;
+  background-color: var(--very-dark-blue-screen);
+  border-radius: 5px;
+  color: white;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: right;
+}
+.keypad-container {
+  padding: 30px;
+  width: 90%;
+  background-color: var(--very-dark-blue-keypad);
+  border-radius: 5px;
+  margin-top: 40px;
+  height: 380px;
+}
+.reset-and-equal-btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+button {
+  background: var(--light-grey-key);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 16px;
+  font-size: 20px;
+  border: none;
+}
+#equal-el {
+  background: var(--red);
+  color: white;
+  box-shadow: 2px 2px 3px var(--dark-red);
+}
+#reset-el,
+#del-el {
+  background: var(--dark-blue-key-bg);
+  color: white;
+  box-shadow: 2px 2px 3px var(--dark-blue-key-shadow);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

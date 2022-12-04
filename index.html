@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="row">
+        <div class="col"><h1>calc</h1></div>
+        <div class="col">
+          <h4>THEME: TOGGLER</h4>
+        </div>
+      </div>
+
+      <div id="screen"></div>
+      <div class="keypad-container">
+        <div id="keypad">
+          <button id="seven-el" class="key" value="7">7</button>
+          <button id="eight-el" class="key" value="8">8</button>
+          <button id="nine-el">9</button>
+          <button id="del-el">DEL</button>
+          <button id="four-el">4</button>
+          <button id="five-el">5</button>
+          <button id="six-el">6</button>
+          <button id="plus-el">+</button>
+          <button id="one-el">1</button>
+          <button id="two-el">2</button>
+          <button id="three-el">3</button>
+          <button id="minus-el" data-action="subtract">-</button>
+          <button id="point-el" data-action="decimal">.</button>
+          <button id="zero-el">0</button>
+          <button id="divide-el" data-action="divide">/</button>
+          <button id="multiply-el" data-action="multiply">x</button>
+        </div>
+        <div class="reset-and-equal-btn">
+          <button id="reset-el" data-action="clear">RESET</button>
+          <button id="equal-el" data-action="calculate">=</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Mehtap Tataroğlu</a>.
+        <script src="App.js"></script>
+      </div>
+    </footer>
+  </body>
+</html>
