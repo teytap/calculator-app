@@ -17,6 +17,7 @@ const pointEl = document.getElementById("point-el");
 const resetEl = document.getElementById("reset-el");
 const deleteEl = document.getElementById("del-el");
 const equalEl = document.getElementById("equal-el");
+const themeCss = document.getElementById("theme-css");
 
 let num = 0;
 let num1;
@@ -104,14 +105,11 @@ arr.forEach((element, index) => {
   element.addEventListener("click", () => {
     element.style.opacity = "1";
     if (index == 0) {
-      document.getElementsByTagName("body")[0].style.backgroundColor =
-        "var(--very-dark-blue-main)";
+      document.getElementById("theme-css").href = "style.css";
     } else if (index == 1) {
-      document.getElementsByTagName("body")[0].style.backgroundColor =
-        "hsl(0, 0%, 90%)";
+      document.getElementById("theme-css").href = "style2.css";
     } else {
-      document.getElementsByTagName("body")[0].style.backgroundColor =
-        "hsl(268, 75%, 9%)";
+      document.getElementById("theme-css").href = "style3.css";
     }
     arr
       .filter(function (item) {
