@@ -96,3 +96,29 @@ equalEl.addEventListener("click", function () {
   "use strict";
   screen.innerHTML = eval(screen.innerHTML);
 });
+//toggler function
+var buttons = document.getElementsByClassName("button");
+var arr = [...buttons];
+
+arr.forEach((element, index) => {
+  element.addEventListener("click", () => {
+    element.style.opacity = "1";
+    if (index == 0) {
+      document.getElementsByTagName("body")[0].style.backgroundColor =
+        "var(--very-dark-blue-main)";
+    } else if (index == 1) {
+      document.getElementsByTagName("body")[0].style.backgroundColor =
+        "hsl(0, 0%, 90%)";
+    } else {
+      document.getElementsByTagName("body")[0].style.backgroundColor =
+        "hsl(268, 75%, 9%)";
+    }
+    arr
+      .filter(function (item) {
+        return item != element;
+      })
+      .forEach((item) => {
+        item.style.opacity = "0";
+      });
+  });
+});

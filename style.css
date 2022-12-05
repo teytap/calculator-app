@@ -72,17 +72,29 @@ button {
   margin: 16px;
   font-size: 20px;
   border: none;
+  box-shadow: 2px 2px 2px hsl(28, 16%, 65%);
+}
+button:hover {
+  background: white;
+  cursor: pointer;
 }
 #equal-el {
   background: var(--red);
   color: white;
-  box-shadow: 2px 2px 3px var(--dark-red);
+  box-shadow: 2px 2px 2px var(--dark-red);
+  cursor: pointer;
 }
 #reset-el,
 #del-el {
   background: var(--dark-blue-key-bg);
   color: white;
-  box-shadow: 2px 2px 3px var(--dark-blue-key-shadow);
+  box-shadow: 2px 2px 2px var(--dark-blue-key-shadow);
+  cursor: pointer;
+}
+#reset-el:hover,
+#del-el:hover,
+#equal-el:hover {
+  opacity: 0.8;
 }
 .attribution {
   font-size: 11px;
@@ -90,4 +102,31 @@ button {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+/*toggle*/
+.toggle-col li {
+  color: white;
+  list-style: none;
+}
+.button {
+  height: 16px;
+  width: 16px;
+  appearance: none;
+  background-color: var(--red);
+  border-radius: 50%;
+  opacity: 0;
+  margin-bottom: 3px;
+}
+.button:hover {
+  cursor: pointer;
+}
+.tri-state-toggle {
+  display: flex;
+  justify-content: center;
+  border: 3px solid var(--very-dark-blue-keypad);
+  border-radius: 16px;
+  background: var(--very-dark-blue-keypad);
+}
+#one {
+  opacity: 1;
 }
