@@ -70,10 +70,11 @@ main {
 button {
   background: var(--light-grey-key);
   color: var(--dark-grey-blue);
+  font-family: "League Spartan", sans-serif;
+  font-size: 30px;
   border-radius: 5px;
   padding: 10px 15px;
-  margin: 16px;
-  font-size: 20px;
+  margin: 10px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -136,4 +137,22 @@ button:hover {
 }
 #one {
   opacity: 1;
+}
+@media (max-width: 375px) {
+  main {
+    margin: 10px;
+  }
+  .keypad-container {
+    padding: 16px;
+    max-width: 360px;
+    height: 360px;
+  }
+  #screen {
+    padding: 20px 16px;
+    width: 90%;
+    color: var(--text-color);
+    font-size: 42px;
+    line-height: 52px;
+    text-align: right;
+  }
 }

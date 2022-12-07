@@ -34,7 +34,6 @@ main {
 }
 .row {
   display: flex;
-
   justify-content: space-between;
 }
 #screen {
@@ -69,10 +68,11 @@ main {
 button {
   background: var(--light-grey-key);
   color: var(--dark-grey-blue);
+  font-family: "League Spartan", sans-serif;
   border-radius: 5px;
   padding: 10px 15px;
-  margin: 16px;
-  font-size: 20px;
+  margin: 10px;
+  font-size: 30px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -122,6 +122,7 @@ button:hover {
   border-radius: 50%;
   opacity: 0;
   margin-bottom: 3px;
+  font-weight: 700;
 }
 .button:hover {
   cursor: pointer;
@@ -136,39 +137,22 @@ button:hover {
 #one {
   opacity: 1;
 }
-:root {
-  /*background*/ /*
-  --very-dark-blue-main: hsl(0, 0%, 90%);
-  --very-dark-blue-screen: hsl(0, 0%, 93%);
-  --very-dark-blue-keypad: hsl(0, 5%, 81%);
 
-  /*Keys*/ /*
-  --dark-blue-key-bg: hsl(185, 42%, 37%);
-  --dark-blue-key-shadow: hsl(185, 58%, 25%);
-  --red: hsl(25, 98%, 40%);
-  --dark-red: hsl(25, 99%, 27%);
-  --light-grey-key: hsl(45, 7%, 89%);
-  --grey-orange: hsl(35, 11%, 61%);
-
-  /*Text*/ /*
-  --dark-grey-blue: hsl(60, 10%, 19%);
-  --text-color: hsl(60, 10%, 19%);*/
-}
-theme3 {
-  /*background*/ /*
-  --very-dark-blue-main: hsl(268, 75%, 9%);
-  --very-dark-blue-screen: hsl(268, 71%, 12%);
-  --very-dark-blue-keypad: hsl(268, 71%, 12%);
-
-  /*Keys*/ /*
-  --dark-blue-key-bg: hsl(281, 89%, 26%);
-  --dark-blue-key-shadow: hsl(285, 91%, 52%);
-  --red: hsl(176, 100%, 44%);
-  --dark-red: hsl(177, 92%, 70%);
-  --light-grey-key: hsl(268, 47%, 21%);
-  --grey-orange: hsl(290, 70%, 36%);
-
-  /*Text*/ /*
-  --dark-grey-blue: hsl(52, 100%, 62%);
-  --text-color: hsl(52, 100%, 62%);*/
+@media (max-width: 375px) {
+  main {
+    margin: 10px;
+  }
+  .keypad-container {
+    padding: 16px;
+    max-width: 360px;
+    height: 360px;
+  }
+  #screen {
+    padding: 20px 16px;
+    width: 90%;
+    color: var(--text-color);
+    font-size: 42px;
+    line-height: 52px;
+    text-align: right;
+  }
 }
