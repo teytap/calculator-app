@@ -1,1 +1,1 @@
-calculator app  https://frabjous-starlight-209da9.netlify.app/
+calculator app  https://calculator-starlight.netlify.app/
